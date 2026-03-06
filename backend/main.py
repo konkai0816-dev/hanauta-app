@@ -1,5 +1,5 @@
 from dotenv import load_dotenv
-load_dotenv(dotenv_path="../.env")
+load_dotenv()
 
 from fastapi import FastAPI, File, UploadFile, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -7,7 +7,13 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 import os
 
-from recognizer import recognize, parse_results
+try:
+    from recognizer import recognize, parse_results
+except ModuleNotFoundError:
+    from backend.recognizer import recognize, parse_results
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+FRONTEND_DIR = os.path.join(BASE_DIR, "..", "frontend")
 
 app = FastAPI()
 
@@ -30,3 +36,11 @@ async def recognize_audio(audio: UploadFile = File(...)):
 
     raw = recognize(audio_bytes, audio_format)
     return parse_results(raw)
+
+
+@app.get("/")
+async def serve_index():
+    return FileResponse(os.path.join(FRONTEND_DIR, "index.html"))
+
+
+app.mount("/", StaticFiles(directory=FRONTEND_DIR), name="static")

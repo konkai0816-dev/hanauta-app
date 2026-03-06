@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8000/recognize";
+const API_URL = "/recognize";
 const MAX_SECONDS = 30;
 
 const recordBtn    = document.getElementById("recordBtn");
