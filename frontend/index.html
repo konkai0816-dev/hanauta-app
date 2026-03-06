@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>鼻歌で曲を当てよう</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+
+    <header class="header">
+      <div class="logo">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 18V5l12-2v13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="2"/>
+          <circle cx="18" cy="16" r="3" stroke="currentColor" stroke-width="2"/>
+        </svg>
+        <span class="logo-text">HumMatch</span>
+      </div>
+      <p class="tagline">鼻歌を歌って曲を当てよう</p>
+      <p class="notice">日本語楽曲のみ対応</p>
+    </header>
+
+    <main class="main">
+
+      <!-- 待機・録音エリア -->
+      <div id="recordArea" class="record-area">
+        <div class="mic-wrapper">
+          <div class="pulse-ring" id="pulseRing"></div>
+          <button id="recordBtn" class="mic-btn" aria-label="録音開始">
+            <svg id="micIcon" class="mic-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="9" y="2" width="6" height="12" rx="3" stroke="currentColor" stroke-width="2"/>
+              <path d="M5 10a7 7 0 0 0 14 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <line x1="12" y1="19" x2="12" y2="22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <line x1="8" y1="22" x2="16" y2="22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <svg id="stopIcon" class="stop-icon hidden" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <rect x="6" y="6" width="12" height="12" rx="2"/>
+            </svg>
+          </button>
+        </div>
+
+        <p id="recordLabel" class="record-label">タップして録音開始</p>
+
+        <div id="timerArea" class="timer-area hidden">
+          <div class="timer-bar-bg">
+            <div id="timerBar" class="timer-bar"></div>
+          </div>
+          <p id="timerText" class="timer-text">0 / 30秒</p>
+        </div>
+
+        <div class="tips">
+          <p class="tips-title">認識精度を上げるコツ</p>
+          <ul class="tips-list">
+            <li>サビ部分を歌うと認識しやすい</li>
+            <li>15〜20秒ほど歌う</li>
+            <li>静かな場所で録音する</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 認識中エリア -->
+      <div id="loadingArea" class="loading-area hidden">
+        <div class="wave-container">
+          <div class="wave-bar"></div>
+          <div class="wave-bar"></div>
+          <div class="wave-bar"></div>
+          <div class="wave-bar"></div>
+          <div class="wave-bar"></div>
+        </div>
+        <p class="loading-text">曲を認識中...</p>
+      </div>
+
+      <!-- 結果エリア -->
+      <div id="resultArea" class="result-area hidden">
+        <p class="result-heading">認識結果</p>
+        <ul id="resultList" class="result-list"></ul>
+        <button id="retryBtn" class="retry-btn">もう一度試す</button>
+      </div>
+
+      <!-- エラーエリア -->
+      <div id="errorArea" class="error-area hidden">
+        <div class="error-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+            <line x1="12" y1="8" x2="12" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="12" cy="16" r="1" fill="currentColor"/>
+          </svg>
+        </div>
+        <p id="errorMsg" class="error-msg"></p>
+        <button id="retryBtnError" class="retry-btn">もう一度試す</button>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
