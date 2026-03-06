@@ -2,7 +2,7 @@ services:
   - type: web
     name: humatch
     runtime: python
-    buildCommand: "pip install -r backend/requirements.txt"
+    buildCommand: "apt-get install -y ffmpeg && pip install -r backend/requirements.txt"
     startCommand: "uvicorn backend.main:app --host 0.0.0.0 --port $PORT"
     envVars:
       - key: ACRCLOUD_HOST
