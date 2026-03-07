@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プライバシーポリシー - HumMatch</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .privacy-container {
+      width: 100%;
+      max-width: 640px;
+    }
+
+    .privacy-header {
+      text-align: center;
+      padding: 32px 0 28px;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      margin-bottom: 24px;
+      transition: color 0.2s;
+    }
+
+    .back-link:hover {
+      color: var(--primary);
+    }
+
+    .privacy-body {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 36px 32px 40px;
+    }
+
+    .privacy-body h1 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+      background: linear-gradient(135deg, var(--primary), #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .privacy-date {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+    }
+
+    .privacy-body h2 {
+      font-size: 1rem;
+      font-weight: bold;
+      color: var(--primary);
+      margin: 28px 0 10px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid rgba(108, 99, 255, 0.25);
+    }
+
+    .privacy-body p,
+    .privacy-body li {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+
+    .privacy-body ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .privacy-body ul li {
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .privacy-body ul li::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+    }
+
+    .privacy-body a {
+      color: var(--primary);
+      text-decoration: underline;
+      word-break: break-all;
+    }
+
+    .privacy-body a:hover {
+      opacity: 0.8;
+    }
+
+    .operator-box {
+      background: var(--surface2);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-top: 12px;
+    }
+
+    .operator-box p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+
+    @media (max-width: 400px) {
+      .privacy-body {
+        padding: 28px 16px 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="privacy-container">
+
+    <div class="privacy-header">
+      <a href="index.html" class="back-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        HumMatch に戻る
+      </a>
+
+      <div class="logo">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 18V5l12-2v13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="2"/>
+          <circle cx="18" cy="16" r="3" stroke="currentColor" stroke-width="2"/>
+        </svg>
+        <span class="logo-text">HumMatch</span>
+      </div>
+    </div>
+
+    <div class="privacy-body">
+      <h1>プライバシーポリシー</h1>
+      <p class="privacy-date">制定日：2026年3月7日</p>
+
+      <p>KONKAI.DEV（以下「当運営」）は、HumMatch（以下「本サービス」）におけるユーザーの個人情報の取り扱いについて、以下のとおりプライバシーポリシーを定めます。</p>
+
+      <h2>1. 収集する情報</h2>
+      <p>本サービスでは、以下の情報を収集する場合があります。</p>
+      <ul>
+        <li>録音データ（鼻歌音声）：曲認識のためにサーバーへ送信し、認識処理完了後に即時削除します。サーバー上に保存はしません。</li>
+        <li>アクセスログ（IPアドレス、ブラウザ種別、アクセス日時等）：サーバーが自動的に記録します。</li>
+        <li>Cookie および類似技術によって収集される情報（詳細は第4条をご参照ください）。</li>
+      </ul>
+
+      <h2>2. 情報の利用目的</h2>
+      <p>収集した情報は、以下の目的で利用します。</p>
+      <ul>
+        <li>曲の認識サービスの提供</li>
+        <li>サービスの品質改善および障害対応</li>
+        <li>広告の配信（第三者配信事業者による行動ターゲティング広告を含む）</li>
+        <li>不正利用の防止</li>
+      </ul>
+
+      <h2>3. 第三者への情報提供</h2>
+      <p>当運営は、以下の場合を除き、収集した情報を第三者に提供しません。</p>
+      <ul>
+        <li>法令に基づき開示が必要な場合</li>
+        <li>曲認識処理のためにACRCloud（<a href="https://www.acrcloud.com" target="_blank" rel="noopener noreferrer">acrcloud.com</a>）へ音声データを送信する場合。送信先のプライバシーポリシーはACRCloud社の定めに従います。</li>
+        <li>広告配信のためにGoogle LLC等の第三者広告配信事業者へCookie情報等を提供する場合（次条参照）。</li>
+      </ul>
+
+      <h2>4. Cookie および広告について</h2>
+      <p>本サービスでは、Google LLC が提供する広告サービス（Google AdSense）を利用しています。Google AdSense は、ユーザーの興味・関心に基づいた広告（インタレストベース広告）を配信するために Cookie を使用します。</p>
+      <ul>
+        <li>Google がCookieを使用する目的や、データの収集・利用方法については、<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Googleのプライバシーポリシー</a>をご確認ください。</li>
+        <li>インタレストベース広告を無効にするには、<a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">広告設定ページ</a>からオプトアウトできます。</li>
+        <li>Cookie の使用を希望しない場合は、ブラウザの設定から Cookie を無効にすることができます。ただし、一部機能が正常に動作しない場合があります。</li>
+      </ul>
+
+      <h2>5. アクセス解析ツールについて</h2>
+      <p>本サービスでは、サービス改善のためにアクセス解析ツールを導入する場合があります。アクセス解析ツールは Cookie を使用してデータを収集しますが、個人を特定する情報は収集しません。</p>
+
+      <h2>6. プライバシーポリシーの変更</h2>
+      <p>当運営は、必要に応じて本ポリシーを変更することがあります。変更後のポリシーは、本ページに掲載した時点で効力を生じます。重要な変更がある場合は、本サービス上でお知らせします。</p>
+
+      <h2>7. 運営者情報</h2>
+      <div class="operator-box">
+        <p>運営者：KONKAI.DEV<br>
+        本サービス：HumMatch（<a href="https://humatch.onrender.com" target="_blank" rel="noopener noreferrer">humatch.onrender.com</a>）</p>
+      </div>
+
+    </div>
+
+  </div>
+</body>
+</html>
